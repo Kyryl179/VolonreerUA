@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VolonteerUA</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(90deg, #89c3eb, #fde468);
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    .point {
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: #ffffff;
+      border-radius: 5px;
+    }
+    
+    .point .theme {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .point .title {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+    
+    .point .description {
+      margin-bottom: 5px;
+    }
+    
+    .point .location {
+      margin-bottom: 5px;
+    }
+    
+    .point .phone {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h1>Волонтерські точки</h1>
+  <script>
+    let ltheme = ["Вивіз з гарячих точок","Гуманітарка","Житло"];
+    let ltitle = ["Тут може бути ваша назва","Тут може бути ваша назва","Тут може бути ваша назва"];
+    let ldescription = ["Тут може бути ваш опис","Тут може бути ваш опис","Тут може бути ваш опис"];
+    let llocation = ["Тут може бути ваше місо","Тут може бути ваше місто","Тут може бути ваше місто"];
+    let lphone = ["+380 -- --- -- --","+380 -- --- -- --","+380 -- --- -- --"];
+    for (var i = 0; i < 3; i++) {
+      const div = document.createElement('div');
+      div.classList.add('point');
+      
+      const themeDiv = document.createElement('div');
+      themeDiv.classList.add('theme');
+      themeDiv.textContent = ltheme[i];
+      
+      const titleDiv = document.createElement('div');
+      titleDiv.classList.add('title');
+      titleDiv.textContent = ltitle[i];
+      
+      const descriptionDiv = document.createElement('div');
+      descriptionDiv.classList.add('description');
+      descriptionDiv.textContent = ldescription[i];
+      
+      const locationDiv = document.createElement('div');
+      locationDiv.classList.add('location');
+      locationDiv.textContent = llocation[i];
+      
+      const phoneDiv = document.createElement('div');
+      phoneDiv.classList.add('phone');
+      phoneDiv.textContent = lphone[i];
+      
+
+      div.appendChild(themeDiv);
+      div.appendChild(titleDiv);
+      div.appendChild(descriptionDiv);
+      div.appendChild(locationDiv);
+      div.appendChild(phoneDiv);
+      
+
+      document.body.appendChild(div);
+    }
+    
+  </script>
+
+
+
+</body>
+</html>
